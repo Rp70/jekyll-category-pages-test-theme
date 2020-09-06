@@ -13,8 +13,8 @@ EOF
   spec.licenses = ["MIT"]
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(lib/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
+    f.match(%r!^(_layouts/|lib/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
   end
-  
+
   spec.add_development_dependency "rspec", "~> 3.0"
 end
